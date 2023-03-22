@@ -1,2 +1,2 @@
 # Doors-Scripts
-Credit to Noonie and Ping
+Credit to Noonie and Ping , DeividComSono , ChronoAccelerator , Totally Alex , PenguinManiack , Plamen6789 , Suntle , Ukazix , HollowedOutMods , check78 ...
