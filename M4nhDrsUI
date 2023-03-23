@@ -1177,7 +1177,3 @@ Section:NewButton("Endless Doors", "Wow endless doors in doors by check78", func
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/worldcuuuup/main/MusicReplace.txt"))()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Entities/main/DeathSound.txt"))()
 end)
-
-Section:NewButton("", "", function ()
-	
-end)
