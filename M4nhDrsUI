@@ -3,7 +3,7 @@ local Window = Library.CreateLib("Doors Synthetic Scripts By M4nh23", "Ocean")
 local Tab = Window:NewTab("Items")
 local Section = Tab:NewSection("The credits is name of their github name")
 
--- Ver : 1.2
+-- Ver : 1.25
 
 Section:NewButton("Tablet/Scanner", "Tablet by DeividComSono", function()
 	_G.OnShop = true
