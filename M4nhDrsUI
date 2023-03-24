@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Doors Synthetic Scripts By M4nh", "Ocean")
+local Window = Library.CreateLib("Doors Synthetic Scripts By M4nh23", "Ocean")
 local Tab = Window:NewTab("Items")
 local Section = Tab:NewSection("The credits is name of their github name")
 
@@ -497,186 +497,216 @@ Section:NewButton("Devil Crucifix", "By PenguinManiack", function ()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
 end)
 
+-- 2
+
 Section:NewButton("Crucifix On Anything (G to spawn)", "By PenguinManiack", function ()
-	getgenv().spawnKey = Enum.KeyCode.G
+	local uis = game:GetService("UserInputService")
+
 	_G.Range = 30
 	_G.OnAnything = true
 	_G.Fail = false
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+
+	uis.InputBegan:Connect(function (i, p)
+		if i.KeyCode == Enum.KeyCode.G then
+			_G.Range = 30
+			_G.OnAnything = true
+			_G.Fail = false
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+	end)
 end)
 
-Section:NewButton("Crucifix On Anything (Fail & G to spawn)", "By PenguinManiack", function ()
-	getgenv().spawnKey = Enum.KeyCode.G
+Section:NewButton("Crucifix On Anything (G to spawn,Fail)", "By PenguinManiack", function ()
+	local uis = game:GetService("UserInputService")
 	_G.Range = 30
 	_G.OnAnything = true
 	_G.Fail = true
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+
+	uis.InputBegan:Connect(function (i, p)
+		if i.KeyCode == Enum.KeyCode.G then
+			_G.Range = 30
+			_G.OnAnything = true
+			_G.Fail = true
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+	end)
 end)
 
 Section:NewButton("Eletric Crucifix (G to spawn)", "By PenguinManiack", function ()
-	getgenv().spawnKey = Enum.KeyCode.G
+	local uis = game:GetService("UserInputService")
 	_G.Uses = 1
+	_G.Range = 30
+	_G.OnClick = true
+	_G.Variant = "Eletric"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+
+	uis.InputBegan:Connect(function (i, p)
+		if i.KeyCode == Enum.KeyCode.G then
+			_G.Uses = 1
+			_G.Range = 30
+			_G.OnClick = true
+			_G.Variant = "Eletric"
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+	end)
+end)
+
+Section:NewButton("Devil Crucifix", "By PenguinManiack", function ()
+	local uis = game:GetService("UserInputService")
+	_G.Uses = 1
+	_G.Range = 30
+	_G.OnClick = true
+	_G.Variant = "Devil"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+
+	uis.InputBegan:Connect(function (i, p)
+		if i.KeyCode == Enum.KeyCode.G then
+			_G.Uses = 1
+			_G.Range = 30
+			_G.OnClick = true
+			_G.Variant = "Devil"
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+	end)
+end)
+
+--3
+
+Section:NewButton("Crucifix On Anything (Inf Range)", "By PenguinManiack", function ()
+	_G.Range = 9999
+	_G.OnAnything = true
+	_G.Fail = false
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Crucifix On Anything (Inf Range,Fail)", "By PenguinManiack", function ()
+	_G.Range = 9999
+	_G.OnAnything = true
+	_G.Fail = true
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Eletric Crucifix (Inf Range)", "By PenguinManiack", function ()
+	_G.Uses = 1
+	_G.Range = 9999
+	_G.OnClick = true
+	_G.Variant = "Eletric"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Devil Crucifix (Inf Range)", "By PenguinManiack", function ()
+	_G.Uses = 1
+	_G.Range = 9999
+	_G.OnClick = true
+	_G.Variant = "Devil"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+--4
+
+Section:NewButton("Crucifix On Anything (Inf Uses)", "By PenguinManiack", function ()
+	_G.Uses = 9999
+	_G.Range = 30
+	_G.OnAnything = true
+	_G.Fail = false
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Crucifix On Anything (Fail)", "By PenguinManiack", function ()
+	_G.Uses = 9999
+	_G.Range = 30
+	_G.OnAnything = true
+	_G.Fail = true
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Eletric Crucifix", "By PenguinManiack", function ()
+	_G.Uses = 9999
 	_G.Range = 30
 	_G.OnClick = true
 	_G.Variant = "Eletric"
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
 end)
 
-Section:NewButton("Devil Crucifix (G to spawn)", "By PenguinManiack", function ()
-	getgenv().spawnKey = Enum.KeyCode.G
-	_G.Uses = 1
+Section:NewButton("Devil Crucifix", "By PenguinManiack", function ()
+	_G.Uses = 9999
 	_G.Range = 30
 	_G.OnClick = true
 	_G.Variant = "Devil"
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
 end)
 
-Section:NewButton("Crucifix On Anything Inf Range", "By PenguinManiack", function ()
-	_G.Range = 999999999999999999999999999999999999999999999
+--5
+
+Section:NewButton("Crucifix On Anything (Inf Range,Uses,G)", "By PenguinManiack", function ()
+	local uis = game:GetService("UserInputService")
+
+	_G.Uses = 9999
+	_G.Range = 9999
 	_G.OnAnything = true
 	_G.Fail = false
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+
+	uis.InputBegan:Connect(function (i, p)
+		if i.KeyCode == Enum.KeyCode.G then
+			_G.Uses = 9999
+			_G.Range = 9999
+			_G.OnAnything = true
+			_G.Fail = false
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+	end)
 end)
 
-Section:NewButton("Crucifix On Anything (Inf Range & Fail)", "By PenguinManiack", function ()
-	_G.Range = 999999999999999999999999999999999999999999999
+Section:NewButton("Crucifix On Anything (Inf Range,Uses,G,Fail)", "By PenguinManiack", function ()
+	local uis = game:GetService("UserInputService")
+	_G.Uses = 9999
+	_G.Range = 9999
 	_G.OnAnything = true
 	_G.Fail = true
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+
+	uis.InputBegan:Connect(function (i, p)
+		if i.KeyCode == Enum.KeyCode.G then
+			_G.Uses = 9999
+			_G.Range = 30
+			_G.OnAnything = true
+			_G.Fail = true
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+	end)
 end)
 
-Section:NewButton("Eletric Crucifix Inf Range", "By PenguinManiack", function ()
-	_G.Uses = 1
-	_G.Range = 999999999999999999999999999999999999999999999
+Section:NewButton("Eletric Crucifix (Inf Range,Uses,G)", "By PenguinManiack", function ()
+	local uis = game:GetService("UserInputService")
+	_G.Uses = 9999
+	_G.Range = 9999
 	_G.OnClick = true
 	_G.Variant = "Eletric"
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+
+	uis.InputBegan:Connect(function (i, p)
+		if i.KeyCode == Enum.KeyCode.G then
+			_G.Uses = 9999
+			_G.Range = 9999
+			_G.OnClick = true
+			_G.Variant = "Eletric"
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+	end)
 end)
 
-Section:NewButton("Devil Crucifix Inf Range", "By PenguinManiack", function ()
-	_G.Uses = 1
-	_G.Range = 999999999999999999999999999999999999999999999
+Section:NewButton("Devil Crucifix (Inf Range,Uses,G)", "By PenguinManiack", function ()
+	local uis = game:GetService("UserInputService")
+	_G.Uses = 9999
+	_G.Range = 9999
 	_G.OnClick = true
 	_G.Variant = "Devil"
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
-end)
 
-Section:NewButton("Crucifix On Anything (Inf Range & G to spawn)", "By PenguinManiack", function ()
-	getgenv().spawnKey = Enum.KeyCode.G
-	_G.Range = 999999999999999999999999999999999999999999999
-	_G.OnAnything = true
-	_G.Fail = false
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
-end)
-
-Section:NewButton("Crucifix On Anything (Inf Range,Fail & G to spawn)", "By PenguinManiack", function ()
-	getgenv().spawnKey = Enum.KeyCode.G
-	_G.Range = 999999999999999999999999999999999999999999999
-	_G.OnAnything = true
-	_G.Fail = true
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
-end)
-
-Section:NewButton("Eletric Crucifix (Inf Range & G to spawn)", "By PenguinManiack", function ()
-	getgenv().spawnKey = Enum.KeyCode.G
-	_G.Uses = 1
-	_G.Range = 999999999999999999999999999999999999999999999
-	_G.OnClick = true
-	_G.Variant = "Eletric"
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
-end)
-
-Section:NewButton("Devil Crucifix (Inf Range & G to spawn)", "By PenguinManiack", function ()
-	getgenv().spawnKey = Enum.KeyCode.G
-	_G.Uses = 1
-	_G.Range = 999999999999999999999999999999999999999999999
-	_G.OnClick = true
-	_G.Variant = "Devil"
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
-end)
-
-Section:NewButton("Eletric Crucifix Inf Range", "By PenguinManiack", function ()
-	_G.Uses = 1
-	_G.Range = 999999999999999999999999999999999999999999999
-	_G.OnClick = true
-	_G.Variant = "Eletric"
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
-end)
-
-Section:NewButton("Devil Crucifix Inf Range", "By PenguinManiack", function ()
-	_G.Uses = 1
-	_G.Range = 999999999999999999999999999999999999999999999
-	_G.OnClick = true
-	_G.Variant = "Devil"
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
-end)
-
-Section:NewButton("Crucifix On Anything (Inf Range & G to spawn)", "By PenguinManiack", function ()
-	getgenv().spawnKey = Enum.KeyCode.G
-	_G.Range = 999999999999999999999999999999999999999999999
-	_G.OnAnything = true
-	_G.Fail = false
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
-end)
-
-Section:NewButton("Crucifix On Anything (Inf Range,Fail & G to spawn)", "By PenguinManiack", function ()
-	getgenv().spawnKey = Enum.KeyCode.G
-	_G.Range = 999999999999999999999999999999999999999999999
-	_G.OnAnything = true
-	_G.Fail = true
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
-end)
-
-Section:NewButton("Eletric Crucifix (Inf Range & G to spawn)", "By PenguinManiack", function ()
-	getgenv().spawnKey = Enum.KeyCode.G
-	_G.Uses = 1
-	_G.Range = 999999999999999999999999999999999999999999999
-	_G.OnClick = true
-	_G.Variant = "Eletric"
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
-end)
-
-Section:NewButton("Devil Crucifix (Inf Range & G to spawn)", "By PenguinManiack", function ()
-	getgenv().spawnKey = Enum.KeyCode.G
-	_G.Uses = 1
-	_G.Range = 999999999999999999999999999999999999999999999
-	_G.OnClick = true
-	_G.Variant = "Devil"
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
-end)
-
-Section:NewButton("Eletric Crucifix Inf Uses", "By PenguinManiack", function ()
-	_G.Uses = 999999999999999999999999999999999999999999999
-	_G.Range = 999999999999999999999999999999999999999999999
-	_G.OnClick = true
-	_G.Variant = "Eletric"
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
-end)
-
-Section:NewButton("Devil Crucifix Inf Uses", "By PenguinManiack", function ()
-	_G.Uses = 999999999999999999999999999999999999999999999
-	_G.Range = 999999999999999999999999999999999999999999999
-	_G.OnClick = true
-	_G.Variant = "Devil"
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
-end)
-
-Section:NewButton("Eletric Crucifix (Inf Range,Uses & G to spawn)", "By PenguinManiack", function ()
-	getgenv().spawnKey = Enum.KeyCode.G
-	_G.Uses = 999999999999999999999999999999999999999999999
-	_G.Range = 999999999999999999999999999999999999999999999
-	_G.OnClick = true
-	_G.Variant = "Eletric"
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
-end)
-
-Section:NewButton("Devil Crucifix (Inf Range,Uses & G to spawn)", "By PenguinManiack", function ()
-	getgenv().spawnKey = Enum.KeyCode.G
-	_G.Uses = 999999999999999999999999999999999999999999999
-	_G.Range = 999999999999999999999999999999999999999999999
-	_G.OnClick = true
-	_G.Variant = "Devil"
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+	uis.InputBegan:Connect(function (i, p)
+		if i.KeyCode == Enum.KeyCode.G then
+			_G.Uses = 9999
+			_G.Range = 9999
+			_G.OnClick = true
+			_G.Variant = "Devil"
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+	end)
 end)
 
 local Tab = Window:NewTab("Modes")
@@ -1176,4 +1206,8 @@ Section:NewButton("Endless Doors", "Wow endless doors in doors by check78", func
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/worldcuuuup/main/VictrolaRecreation.txt"))()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/worldcuuuup/main/MusicReplace.txt"))()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Entities/main/DeathSound.txt"))()
+end)
+
+Section:NewButton("", "", function ()
+	
 end)
