@@ -1,0 +1,53 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local MobileRunUI = Instance.new("ScreenGui")
+local RunButton = Instance.new("TextButton")
+local CircleUI = Instance.new("UICorner")
+
+--Properties:
+
+MobileRunUI.Name = "MobileRunUI"
+MobileRunUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+MobileRunUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+RunButton.Name = "RunButton"
+RunButton.Parent = MobileRunUI
+RunButton.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
+RunButton.BackgroundTransparency = 0.500
+RunButton.BorderColor3 = Color3.fromRGB(80, 125, 157)
+RunButton.Position = UDim2.new(0.847052097, 0, 0.286163509, 0)
+RunButton.Size = UDim2.new(0, 50, 0, 50)
+RunButton.Font = Enum.Font.Ubuntu
+RunButton.Text = "Run"
+RunButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+RunButton.TextSize = 25.000
+RunButton.TextStrokeTransparency = 0.900
+RunButton.TextTransparency = 0.500
+
+CircleUI.CornerRadius = UDim.new(1, 5)
+CircleUI.Name = "CircleUI"
+CircleUI.Parent = RunButton
+
+-- Scripts:
+
+local function KEUCXP_fake_script() -- RunButton.ToggleRun 
+	local script = Instance.new('LocalScript', RunButton)
+
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character
+	local sprint = false
+	
+	script.Parent.MouseButton1Down:Connect(function()
+		if sprint == false then
+			char:FindFirstChild("Humanoid").WalkSpeed = 21
+			sprint = true
+		else
+			char:FindFirstChild("Humanoid").WalkSpeed = 16
+			sprint = false
+		end
+	end)
+end
+coroutine.wrap(KEUCXP_fake_script)()
