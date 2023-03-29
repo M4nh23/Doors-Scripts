@@ -1,0 +1,688 @@
+firesignal(game.ReplicatedStorage.Bricks.EntityInfo.OnClientEvent, "M4nh23 Drs UI Succesfully loaded! (Big Update Ver 1.5)")
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Doors Synthetic Scripts By M4nh23", "Ocean")
+
+local Tab = Window:NewTab("Items")
+local Section = Tab:NewSection("The credits is name of their github name")
+
+Section:NewButton("Tablet/Scanner", "Tablet by DeividComSono", function()
+	_G.OnShop = true
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/DeividComSono/Scripts/main/Scanner.lua'))()
+end)
+
+Section:NewButton("Candle", "Beta candle by ChronoAccelerator", function ()
+	local Candle = game:GetObjects("rbxassetid://11864230879")[1]	-- mine 12462481981
+    Candle.Parent = game.Players.LocalPlayer.Backpack
+    Candle.Handle.Top.Flame.GuidingLighteffect.PointLight.Brightness = 1
+    Candle.Handle.CanCollide = false
+    Candle.Handle.Top.Flame.GuidingLighteffect.PointLight.Range = 25 	-- i edited range 10 to 25
+    local plr = game.Players.LocalPlayer
+    local Char = plr.Character or plr.CharacterAdded:Wait()
+    local Hum = Char:FindFirstChild("Humanoid")
+    local RightArm = Char:FindFirstChild("RightUpperArm")
+    local LeftArm = Char:FindFirstChild("LeftUpperArm")
+    local RightC1 = RightArm.RightShoulder.C1
+    local LeftC1 = LeftArm.LeftShoulder.C1
+    local AnimIdle = Instance.new("Animation")
+    AnimIdle.AnimationId = "rbxassetid://9982615727"
+    AnimIdle.Name = "IDleloplolo"
+    local cam = workspace.CurrentCamera
+    Candle.Handle.Top.Flame.GuidingLighteffect.EffectLight.LockedToPart = true
+    Candle.Handle.Material = Enum.Material.Salt
+    local track = Hum.Animator:LoadAnimation(AnimIdle)
+    track.Looped = true
+    local Equipped = false
+    for i, v in pairs(Candle:GetDescendants()) do
+        if v:IsA("BasePart") then
+            v.CanCollide = false
+        end
+    end
+    Candle.Equipped:Connect(function()
+        for _, v in next, Hum:GetPlayingAnimationTracks() do
+            v:Stop()
+        end
+        Equipped = true
+    -- RightArm.Name = "R_Arm"
+        track:Play()
+    -- RightArm.RightShoulder.C1 = RightC1 * CFrame.Angles(math.rad(-90), math.rad(-15), 0)
+    end)
+    Candle.Unequipped:Connect(function()
+        RightArm.Name = "RightUpperArm"
+        track:Stop()
+        Equipped = false
+    -- RightArm.RightShoulder.C1 = RightC1
+    end)
+
+    Candle.TextureId = "rbxassetid://11622366799"
+end)
+
+Section:NewButton("Flashlight", "This gives you a flashlight by Totally Alex", function ()
+    local item = game:GetObjects("rbxassetid://11242492137")[1]
+    item.Parent = game.Players.LocalPlayer.Backpack
+	item.Handle.SpotLight.Angle = 35
+end)
+
+local Tab = Window:NewTab("Crucifix")
+local Section = Tab:NewSection("for crucifix on anything hold Q and click")
+
+Section:NewButton("Crucifix On Anything", "By PenguinManiack", function ()
+	_G.Range = 30
+	_G.OnAnything = true
+	_G.Fail = false
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Crucifix On Anything (Fail)", "By PenguinManiack", function ()
+	_G.Range = 30
+	_G.OnAnything = true
+	_G.Fail = true
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Eletric Crucifix", "By PenguinManiack", function ()
+	_G.Uses = 1
+	_G.Range = 30
+	_G.OnClick = true
+	_G.Variant = "Eletric"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Devil Crucifix", "By PenguinManiack", function ()
+	_G.Uses = 1
+	_G.Range = 30
+	_G.OnClick = true
+	_G.Variant = "Devil"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+-- 2
+
+Section:NewButton("Crucifix On Anything (Inf Range)", "By PenguinManiack", function ()
+	_G.Range = 9999
+	_G.OnAnything = true
+	_G.Fail = false
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Crucifix On Anything (Inf Range,Fail)", "By PenguinManiack", function ()
+	_G.Range = 9999
+	_G.OnAnything = true
+	_G.Fail = true
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Eletric Crucifix (Inf Range)", "By PenguinManiack", function ()
+	_G.Uses = 1
+	_G.Range = 9999
+	_G.OnClick = true
+	_G.Variant = "Eletric"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Devil Crucifix (Inf Range)", "By PenguinManiack", function ()
+	_G.Uses = 1
+	_G.Range = 9999
+	_G.OnClick = true
+	_G.Variant = "Devil"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+--3
+
+Section:NewButton("Crucifix On Anything (Inf Uses)", "By PenguinManiack", function ()
+	_G.Uses = 9999
+	_G.Range = 30
+	_G.OnAnything = true
+	_G.Fail = false
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Crucifix On Anything (Inf Uses,Fail)", "By PenguinManiack", function ()
+	_G.Uses = 9999
+	_G.Range = 30
+	_G.OnAnything = true
+	_G.Fail = true
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Eletric Crucifix (Inf Uses)", "By PenguinManiack", function ()
+	_G.Uses = 9999
+	_G.Range = 30
+	_G.OnClick = true
+	_G.Variant = "Eletric"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Devil Crucifix (Inf Uses)", "By PenguinManiack", function ()
+	_G.Uses = 9999
+	_G.Range = 30
+	_G.OnClick = true
+	_G.Variant = "Devil"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+--4
+
+Section:NewButton("Crucifix On Anything (Inf Range,Uses)", "By PenguinManiack", function ()
+	_G.Uses = 9999
+	_G.Range = 9999
+	_G.OnAnything = true
+	_G.Fail = false
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Crucifix On Anything (Inf Range,Uses,Fail)", "By PenguinManiack", function ()
+	_G.Uses = 9999
+	_G.Range = 9999
+	_G.OnAnything = true
+	_G.Fail = true
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Eletric Crucifix (Inf Range,Uses)", "By PenguinManiack", function ()
+	_G.Uses = 9999
+	_G.Range = 9999
+	_G.OnClick = true
+	_G.Variant = "Eletric"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Devil Crucifix (Inf Range,Uses)", "By PenguinManiack", function ()
+	_G.Uses = 9999
+	_G.Range = 9999
+	_G.OnClick = true
+	_G.Variant = "Devil"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+local Tab = Window:NewTab("Modes")
+local Section = Tab:NewSection("Modes i found on yt and github")
+
+Section:NewButton("Doors Fragmented Mode", "The script is always update per day and it maybe not works by the dev update , by Potato032", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Potato032/Doors-Fragmented-Mode/main/ScriptDONTSHARE.lua"))()
+end)
+
+Section:NewButton("Doors Hardcore Mode", "I knew you will know this mode by Plamen6789", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/plamen6789/HardcoreScriptDOORS/main/HardcoreModeScript"))()
+end)
+
+Section:NewButton("Doors Hardcore Mode Noonie Version", "Other Version of Hardcore Mode by Noonie and Ping", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/M4nh23/Rbx-Doors-Scripts/main/Hardcore_V5_Beta.lua"))()
+	wait(20)
+	firesignal(game.ReplicatedStorage.EntityInfo.Caption.OnClientEvent, "Loadstring made by me , script made by Noonie & Ping!")
+end)
+
+Section:NewButton("Doors Bomb Mode", "Like speedrun mode , you only have 25s to go to next door,60s to open gate door or locked door by Suntle", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Suntle/weird-sh/main/scripts/doorsbomb"))()
+end)
+
+Section:NewButton("Doors Impossible Mode", "Doors but it's Impossbile mode made by Ukazix", function ()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Ukazix/impossible-mode/main/Protected_79.lua.txt'))()
+end)
+
+Section:NewButton("Doors Mayhem Mode", "Mayhem mode by HollowedOutMods", function ()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/HollowedOutMods/MayhemMode/main/loader.lua'))()
+end)
+
+Section:NewButton("Birthday Mode", "Happy Birthday Plamen6789", function ()
+	loadstring(gme:HttpGet("https://raw.githubusercontent.com/plamen6789/BirthdayModeDOORS/main/BirthdayModeScript"))()
+end)
+
+Section:NewButton("Endless Doors", "Wow endless doors in doors by check78", function ()
+	--Credits to NovaNextruis, Muhammadgames, Zavaled, SquidR
+	--ICherryKardess, Screech, Jessica, TheEndIsNear, C87FM
+	--Your game might crash when you get an achievement
+
+	game.SoundService.AmbientReverb = "City"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/worldcuuuup/main/Script.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/worldcuuuup/main/ScriptNoAchievements.txt"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/worldcuuuup/main/seekeye.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/worldcuuuup/main/seekmodel.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/worldcuuuup/main/VictrolaRecreation.txt"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/worldcuuuup/main/MusicReplace.txt"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Entities/main/DeathSound.txt"))()
+end)
+
+local Tab = Window:NewTab("Gui")
+local Section = Tab:NewSection("Just some GUI")
+
+Section:NewButton("Infinite Yield", "VERY POPULAR YOU NEED TO KNOW THIS , by EdgelY", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+
+Section:NewButton("CMD-X", "This not popular but still at good by Pigeon and Alx", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+end)
+
+Section:NewButton("Bypassed Dex V3", "Try Infinite and type dex but you can't select any tab,but this bypassed by Hamsta Gaming", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+end)
+
+Section:NewButton("Poop Doors", "Poop Doors edited by mstudio45", function ()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/poopdoors_edited/main/poopdoors_edited.lua"),true))()
+end)
+
+Section:NewButton("Old MorphGUI", "Old Doors Morphing gui by ChronoAccelerator but orinal by PenguinManiack", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAccelerator/Public-Scripts/main/Morphing/MorphScript.lua"))()
+end)
+
+Section:NewButton("PenguinManiack Morph Gui", "New Version", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/RmdComunnityScriptsProvider/AngryHub/main/DoorsMorphScript.lua"))()  
+end)
+
+Section:NewButton("Plamen Utilities Gui", "by Plamen6789", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/plamen6789/UtilitiesHub/main/UtilitiesGUI"))()
+end)
+
+Section:NewButton("Plamen Old Entity Gui", "Yes", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/plamen6789/OldEntityGUI/main/OldEntityGUI"))()
+end)
+
+Section:NewButton("FE Trolling Gui (Lag)", "FE trolling gui it may crash you , by Chrono", function ()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/poopdoors_edited/main/poopdoors_edited.lua"),true))()
+end)
+
+Section:NewButton("DeividHub", "Doors hub by DeividComsono", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/DeividComSono/Scripts/main/6839171747.lua"))()
+end)
+
+Section:NewButton("Sprint GUI", "Hold Q to sprint , stamina is 500 , made by (I forgot him and i just changed stamina)", function ()
+	local Sprint = Instance.new("Frame")
+	local ImageLabel = Instance.new("ImageLabel")
+	local UICorner = Instance.new("UICorner")
+	local UIPadding = Instance.new("UIPadding")
+	local Bar = Instance.new("Frame")
+	local UICorner_2 = Instance.new("UICorner")
+	local UIPadding_2 = Instance.new("UIPadding")
+	local Fill = Instance.new("Frame")
+	local UICorner_3 = Instance.new("UICorner")
+
+	--Properties:
+
+	local StaminaGui = Instance.new("ScreenGui")
+
+	--Properties:
+
+	StaminaGui.Name = "StaminaGui"
+	StaminaGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	StaminaGui.Enabled = true
+	StaminaGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	Sprint.Name = "Sprint"
+	Sprint.Parent = StaminaGui
+	Sprint.AnchorPoint = Vector2.new(0, 1)
+	Sprint.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Sprint.BackgroundTransparency = 1.000
+	Sprint.Position = UDim2.new(0.931555569, 0, 0.987179458, 0)
+	Sprint.Size = UDim2.new(0.0556001104, 0, 0.0756410286, 0)
+	Sprint.SizeConstraint = Enum.SizeConstraint.RelativeYY
+	Sprint.ZIndex = 1005
+
+	ImageLabel.Parent = Sprint
+	ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 222, 189)
+	ImageLabel.Size = UDim2.new(1, 0, 1, 0)
+	ImageLabel.SizeConstraint = Enum.SizeConstraint.RelativeYY
+	ImageLabel.Visible = false
+
+	UICorner.CornerRadius = UDim.new(1, 0)
+	UICorner.Parent = ImageLabel
+
+	UIPadding.Parent = Sprint
+	UIPadding.PaddingBottom = UDim.new(0.300000012, -5)
+	UIPadding.PaddingLeft = UDim.new(0.0199999996, 0)
+	UIPadding.PaddingRight = UDim.new(0.0500000007, -15)
+	UIPadding.PaddingTop = UDim.new(0.300000012, -5)
+
+	Bar.Name = "Bar"
+	Bar.Parent = Sprint
+	Bar.AnchorPoint = Vector2.new(0, 0.5)
+	Bar.BackgroundColor3 = Color3.fromRGB(56, 46, 39)
+	Bar.BackgroundTransparency = 0.700
+	Bar.Position = UDim2.new(-2.72600269, 0, 0.499999672, 0)
+	Bar.Size = UDim2.new(3.60599804, 0, 0.600000083, 0)
+	Bar.ZIndex = 0
+
+	UICorner_2.CornerRadius = UDim.new(0.25, 0)
+	UICorner_2.Parent = Bar
+
+	UIPadding_2.Parent = Bar
+	UIPadding_2.PaddingBottom = UDim.new(0, 4)
+	UIPadding_2.PaddingLeft = UDim.new(0, 4)
+	UIPadding_2.PaddingRight = UDim.new(0, 4)
+	UIPadding_2.PaddingTop = UDim.new(0, 4)
+
+	Fill.Name = "Fill"
+	Fill.Parent = Bar
+	Fill.AnchorPoint = Vector2.new(0, 0.5)
+	Fill.BackgroundColor3 = Color3.fromRGB(213, 185, 158)
+	Fill.Position = UDim2.new(0, 0, 0.5, 0)
+	Fill.Size = UDim2.new(1, 0, 1, 0)
+	Fill.ZIndex = 2
+
+	UICorner_3.CornerRadius = UDim.new(0.25, 0)
+	UICorner_3.Parent = Fill
+
+	local erm = Instance.new("ScreenGui")
+	local ImageLabel = Instance.new("ImageLabel")
+	erm.IgnoreGuiInset = true
+	erm.Name = "erm"
+	erm.Parent = Parent
+	erm.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	ImageLabel.Parent = erm
+	ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ImageLabel.BackgroundTransparency = 1.000
+	ImageLabel.Size = UDim2.new(1, 0, 0.998717964, 0)
+	ImageLabel.Image = "rbxassetid://190596490"
+	ImageLabel.ImageColor3 = Color3.fromRGB(0, 0, 0)
+
+	ImageLabel.ImageTransparency = 1
+
+	-- Services
+
+	local Players = game:GetService("Players")
+	local UIS = game:GetService("UserInputService")
+
+	-- Variables
+
+	local Plr = Players.LocalPlayer
+	local Char = Plr.Character or Plr.CharacterAdded:Wait()
+	local Hum = Char:WaitForChild("Humanoid")
+
+	local stamina, staminaMax = 500, 500
+	local sprintTime = 35
+	local cooldown = false
+
+	local ModuleScripts = {
+		MainGame = require(Plr.PlayerGui.MainUI.Initiator.Main_Game),
+	}
+
+	-- Setup
+
+	local nIdx; nIdx = hookmetamethod(game, "__newindex", newcclosure(function(t, k, v)
+		if k == "WalkSpeed" then
+			if ModuleScripts.MainGame.chase then
+				v = ModuleScripts.MainGame.crouching and 15 or 22
+			elseif ModuleScripts.MainGame.crouching then
+				v = 8
+			else
+				v = isSprinting and 20 or 16
+			end
+		end
+
+		return nIdx(t, k, v)
+	end))
+
+	-- Scripts
+
+	sprintTime = math.max(sprintTime - 1, 1)
+	local zerostamtween = game.TweenService:Create(ImageLabel,TweenInfo.new(12),{ImageTransparency = 0})
+	UIS.InputBegan:Connect(function(key, gameProcessed)
+		if not gameProcessed and key.KeyCode == Enum.KeyCode.Q and not cooldown and not ModuleScripts.MainGame.crouching then
+			-- Sprinting
+
+			isSprinting = true
+			Hum:SetAttribute("SpeedBoost",4)
+			zerostamtween:Play()
+			while UIS:IsKeyDown(Enum.KeyCode.Q) and stamina > 0 do
+				stamina = math.max(stamina - 1, 0)
+				Fill.Size = UDim2.new(1 / staminaMax * stamina, 1, 1, 0)
+				task.wait(sprintTime / 100)
+			
+			end
+
+			-- Reset
+			zerostamtween:Pause()
+			isSprinting = false
+			Hum:SetAttribute("SpeedBoost",0)
+			game.TweenService:Create(ImageLabel,TweenInfo.new(1),{ImageTransparency = 1}):Play()
+			Hum.WalkSpeed = 16
+
+			if stamina == 0 then
+				-- Cooldown
+				firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent,"You're exhausted.")
+				local noStamernaSound = Instance.new("Sound",workspace)
+				noStamernaSound.SoundId = "rbxassetid://8258601891"
+				noStamernaSound.Volume = 0.8
+				noStamernaSound.PlayOnRemove = true
+				noStamernaSound:Destroy()
+				cooldown = true
+				game.TweenService:Create(ImageLabel,TweenInfo.new(0.3),{ImageTransparency = 0}):Play()
+				wait(0.3)
+				game.TweenService:Create(ImageLabel,TweenInfo.new(10),{ImageTransparency = 1}):Play()
+				for i = 1, staminaMax, 1 do
+					stamina = i
+					Fill.Size = UDim2.new(1 / staminaMax * i, 1, 1, 0)
+
+					task.wait(sprintTime / 50)
+				end
+
+				cooldown = false
+			else
+				-- Refill
+				cooldown = false
+				Spawn(function()
+			    --wait(1)
+				    cooldown = false
+				end)
+				game.TweenService:Create(ImageLabel,TweenInfo.new(1),{ImageTransparency = 1}):Play()
+				while not UIS:IsKeyDown(Enum.KeyCode.Q) do
+					stamina = math.min(stamina + 1, staminaMax)
+					Fill.Size = UDim2.new(1 / staminaMax * stamina, 1, 1, 0)
+
+					task.wait(sprintTime / 50)
+				end
+			end        
+		end
+	end)
+	Hum:SetAttribute("SpeedBoost",0)
+	Hum.WalkSpeed = 16
+end)
+
+local Tab = Window:NewTab("Utilities")
+local Section = Tab:NewSection("Utilities yes")
+
+Section:NewButton("Flashlight", "Press F to turn on flashlight , press G to turn off flashlight , made by Manh (me)", function ()
+	local suf = Instance.new("SurfaceLight")
+	local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local uis = game:GetService("UserInputService")
+
+	suf.Name = "Light"
+	suf.Parent = hrp
+	suf.Color = Color3.fromRGB(255, 255, 255)
+	suf.Brightness = 0
+	suf.Range = 60
+	suf.Angle = 29
+	suf.Shadows = false
+
+	uis.InputBegan:Connect(function(i, p)
+		if i.KeyCode == Enum.KeyCode.F then 	--F to turn on light
+			suf.Brightness = 3
+		end
+	end)
+
+	uis.InputEnded:Connect(function(i, p)
+		if i.KeyCode == Enum.KeyCode.G then		--G to turn off light
+			suf.Brightness = 0
+		end
+	end)
+end)
+
+Section:NewButton("Better flashlight", "still flashlight i made but it better i guess...", function ()
+	local suf = Instance.new("SurfaceLight")
+	local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local uis = game:GetService("UserInputService")
+
+	suf.Name = "Light"
+	suf.Parent = hrp
+	suf.Color = Color3.fromRGB(140, 117, 105)
+	suf.Brightness = 0
+	suf.Range = 60
+	suf.Angle = 29
+	suf.Shadows = false
+
+	uis.InputBegan:Connect(function(i, p)
+		if i.KeyCode == Enum.KeyCode.F then 	--F to turn on light
+			suf.Brightness = 5
+		end
+	end)
+
+	uis.InputEnded:Connect(function(i, p)
+		if i.KeyCode == Enum.KeyCode.G then		--G to turn off light
+			suf.Brightness = 0
+		end
+	end)
+end)
+
+Section:NewButton("Anti-Lag", "Best anti lag (NO REMOVE DECAL)", function ()
+		_G.Stop = false  --stop the script
+		local function FOV()
+	    	if game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("CameraPositioner") then 
+	        	game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("CameraPositioner"):Destroy()
+	    	end
+	    	local part = Instance.new("Part")
+	    	part.Name = "CameraPositioner"
+	    	part.Anchored = true 
+	    	part.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+	    	part.CanCollide = false
+	    	game:GetService("RunService").RenderStepped:Connect(function()
+	        	part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,-100000000,-100)
+	    	end)
+	    	local camera = workspace.CurrentCamera
+	    	camera.CameraSubject = part
+	    	for _,v in pairs(workspace:GetDescendants()) do 
+	    	if v:IsA("BasePart") then v.Material = Enum.Material.SmoothPlastic end  
+	    	end 
+	    	if _G.Stop then 
+	        	camera.CameraSubject=game.Players.LocalPlayer.Character.Humanoid
+	    	end 
+		end 
+
+		FOV()
+
+
+	while  true do -- reset
+		task.wait(8)
+
+
+		_G.Stop = false
+		local function FOV()
+	    	if game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("CameraPositioner") then 
+	        	game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("CameraPositioner"):Destroy()
+	    	end
+	    	local part = Instance.new("Part")
+	    	part.Name = "CameraPositioner"
+	    	part.Anchored = true 
+	    	part.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+	    	part.CanCollide = false
+	    	game:GetService("RunService").RenderStepped:Connect(function()
+	        	part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(1,-100000000,-100)
+	    	end)
+	    	local camera = workspace.CurrentCamera
+	    	camera.CameraSubject = part
+	    	for _,v in pairs(workspace:GetDescendants()) do 
+	    	if v:IsA("BasePart") then v.Material = Enum.Material.SmoothPlastic end  
+	    	end 
+	    	if _G.Stop then 
+	        	camera.CameraSubject=game.Players.LocalPlayer.Character.Humanoid
+	    	end 
+		end 
+
+		FOV()
+	end
+end)
+
+Section:NewButton("Noclip Bypass (no entity)", "Bypass anti-cheat", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/tfLb1EUs"))()  
+end)
+
+Section:NewButton("Chrono Bypass Anti-Cheat", "Doors have anti-cheat update , now this script will help you noclip or fly without anti-cheat", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAccelerator/Public-Scripts/main/DoorsBypasses/DoorsACBypass.lua",true))()
+end)
+
+local Tab = Window:NewTab("Custom entities spawner")
+local Section = Tab:NewSection("custom entities i found on github by check78")
+
+Section:NewButton("Entt (Rebound)", "Entt is Rebound entity by Potato032", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Potato032/Entt/main/obf_aD5wikXg0gIS8Hoe65Vo4iR2KQAFUeGOH7367242Ch6VHK72Ty5Lzm8Jj6XYvmg6.lua.txt"))()
+end)
+
+Section:NewButton("OverSeer", "By check78", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Entities/main/overseer.txt"))()
+end)
+
+Section:NewButton("Phil", "By check78", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Entities/main/Phil.txt"))()
+end)
+
+Section:NewButton("Matcher", "In endless doors by check78", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Entities/main/Matcher.txt"))()
+end)
+
+Section:NewButton("Blink", "Blink fixed by check78 , blonk", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Entities/main/Blink%20Fixed.txt"))()
+end)
+
+local Tab = Window:NewTab("Plushie")
+local Section = Tab:NewSection("Doors Plushie")
+
+Section:NewButton("Screech plushly patched", "Psst", function()
+	local Item = game:GetObjects("rbxassetid://110017631")[1] 
+	Item.Parent = game.Players.LocalPlayer.Backpack 
+end)
+
+Section:NewButton("Screech Figure patched", "screech x figure?", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/aKaxwTKc"))()  
+end)
+
+Section:NewButton("Jack plushy patched", "My heart", function()
+	local Item = game:GetObjects("rbxassetid://11996695916")[1]
+	Item.Parent = game.Players.LocalPlayer.Backpack
+end)
+
+Section:NewButton("Screech plushy", "You hate screech but you didn't hate plushy" function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/yAyZVLAW"))()
+end)
+
+Section:NewButton("Seek plushie", "Seek love his plushie", function()
+	loadstring(game:HttpGet("https://pastefy.ga/cMz6DDWC/raw"))()  
+end)
+
+Section:NewButton("Ambush plushie", "Im rebound", function()
+	loadstring(game:HttpGet("https://pastefy.ga/F05e55h3/raw"))()  
+end)
+
+Section:NewButton("A-60 Plushie", "It look like a imposter", function()
+	loadstring(game:HttpGet("https://pastefy.ga/UhuzwPLZ/raw"))()  
+end)
+
+Section:NewButton("figure plushie", "i can't hear you", function()
+	loadstring(game:HttpGet("https://pastefy.ga/cn87mQiq/raw"))()  
+end)
+
+Section:NewButton("Christmas screech", "Christmas already started", function()
+	loadstring(game:HttpGet("https://pastefy.ga/x1MCsUL1/raw"))()  
+end)
+
+Section:NewButton("Rebound Plushie (patched)", "I waiting for you", function()
+	loadstring(game:HttpGet("https://pastefy.ga/FxeEaLhN/raw"))()  
+end)
+
+local Tab = Window:NewTab("Other")
+local Section = Tab:NewSection("Idk what to say at this")
+
+Section:NewButton("FE Inf Jack", "Need an anti-cheat first then execute", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/aKHfDXT4"))()
+end)
+
+Section:NewButton("Stop Posting About Among SuS", "Credit of STOP POSTING ABOUT BALLER , by PenguinManiack", function ()
+	local model = game:GetObjects("rbxassetid://11947954739")[1]
+	model.Parent = workspace
+	model.Anchored = true
+	model.CFrame = workspace.CurrentRooms[0].Parts.FrontDesk.Paper.CFrame * CFrame.new(0, .9, 0)
+	model.Prompt.Triggered:Connect(function()
+   	   firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "you have been SUSED by the AMONGUS")
+   	   model["STOP POSTING ABOUT AMONG US (FULL, CLEAN)"]:Play()
+	end)
+end)
