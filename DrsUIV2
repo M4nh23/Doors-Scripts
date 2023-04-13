@@ -1,4 +1,4 @@
-firesignal(game.ReplicatedStorage.Bricks.EntityInfo.OnClientEvent, "M4nh23 Drs UI Succesfully loaded! (Big Update Ver 1.5)")
+firesignal(game.ReplicatedStorage.EntityInfo.Caption.OnClientEvent, "M4nh Drs UI V2 Successfully Loaded")
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Doors Synthetic Scripts By M4nh23", "Ocean")
@@ -63,8 +63,117 @@ Section:NewButton("Flashlight", "This gives you a flashlight by Totally Alex", f
 	item.Handle.SpotLight.Angle = 35
 end)
 
+--[[
+Section:NewButton("Flashlight with anim", "Flashlight need a animation", function ()
+    -- Flashlight item
+    local item = game:GetObjects("rbxassetid://11242492137")[1]
+    item.Parent = game.Players.LocalPlayer.Backpack
+    item.Handle.SpotLight.Angle = 35
+    item.Handle.SpotLight.Range = 60
+
+    local folder = Instance.new("Folder")
+    local anim = Instance.new("Animation")
+
+    folder.Name = "Animations"
+    folder.Parent = item
+
+    anim.Name = "idle"
+    anim.AnimationId = "rbxassetid://6516424098"
+    anim.Parent = folder
+end)
+
+Section:NewButton("Flashlight with anim V2", "Flashlight need a animation", function ()
+    -- Flashlight item
+    local item = game:GetObjects("rbxassetid://11242492137")[1]
+    item.Parent = game.Players.LocalPlayer.Backpack
+    item.Handle.SpotLight.Angle = 35
+    item.Handle.SpotLight.Range = 60
+
+    local folder = Instance.new("Folder")
+    local anim = Instance.new("Animation")
+
+    folder.Name = "Animations"
+    folder.Parent = item
+
+    anim.Name = "idle"
+    anim.AnimationId = "rbxassetid://9982615727"
+    anim.Parent = folder
+end)
+]]
+
+ Section:NewButton("Flashlight with anim V3", "Flashlight need a animation", function ()
+    -- Flashlight item
+    local item = game:GetObjects("rbxassetid://11242492137")[1]
+    item.Parent = game.Players.LocalPlayer.Backpack
+    item.Handle.SpotLight.Angle = 35
+    item.Handle.SpotLight.Range = 60
+
+    local folder = Instance.new("Folder")
+    local anim = Instance.new("Animation")
+
+    folder.Name = "Animations"
+    folder.Parent = item
+
+    anim.Name = "idle"
+    anim.AnimationId = "rbxassetid://10479585177"
+    anim.Parent = folder
+end)
+
+Section:NewButton("Inf Gummy Flashlight", "Yes it's infinite don't worry", function ()
+    local gf = game:GetObjects("rbxassetid://12703225331") [1]
+    local folder = Instance.new("Folder")
+    local anim = Instance.new("Animation")
+
+    gf.Name = "Inf Gummy Flashlight"
+    gf.Parent =  game.Players.LocalPlayer.Backpack
+    gf.Handle.Neon.LightAttch.SurfaceLight.Shadows = true
+
+    folder.Name = "Animation"
+    folder.Parent = gf
+
+    anim.Name = "idle"
+    anim.Parent = folder
+    anim.AnimationId = "rbxassetid://9982615727"
+end)
+
+Section:NewButton("Inf Gummy Flashlight Fixed", "Fixed ver", function ()
+    local gfix = game:GetObjects("rbxassetid://12568829357") [1]
+    local folder = Instance.new("Folder")
+    local animx = Instance.new("Animation")
+
+    gfix.Name = "Inf Gummy Flashlight"
+    gfix.Parent = game.Players.LocalPlayer.Backpack
+    gfix.Handle.Neon.LightAttch.SurfaceLight.Shadows = true
+    gfix.Handle.Neon.LightAttch.SurfaceLight.Brightness = 5
+    gfix.Handle.Neon.LightAttch.SurfaceLight.Angle = 45
+    gfix.Handle.Neon.PointLight.Shadows = true
+
+    folder.Name = "Animations"
+    folder.Parent = gfix
+
+    animx.Name = "idle"
+    animx.Parent = folder
+    animx.AnimationId = "rbxassetid://9982615727"
+end)
+
+Section:NewButton("Holy Grenade", "Made by MrNeRD0", function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/HolyGrenadeByNerd.lua"))()
+end)
+
+Section:NewButton("Magnet", "Made by MrNeRD0", function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/MagnetByNerd.lua"))()
+end)
+
+Section:NewButton("Inf vitamins", "By Nerd (Not works anymore...)", function ()
+    loadstring(game:HttpGet("raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/Inf_Vitamins.lua"))()
+end)
+
+Section:NewButton("Shears", "Already have in items+Morph gui", function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/shears_done.lua"))()
+end)
+
 local Tab = Window:NewTab("Crucifix")
-local Section = Tab:NewSection("for crucifix on anything hold Q and click")
+local Section = Tab:NewSection("for crucifix on anything hold Q and click (Credit to PenguinManiack")
 
 Section:NewButton("Crucifix On Anything", "By PenguinManiack", function ()
 	_G.Range = 30
@@ -96,6 +205,7 @@ Section:NewButton("Devil Crucifix", "By PenguinManiack", function ()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
 end)
 
+local Section = Tab:NewSection("Inf Range")
 -- 2
 
 Section:NewButton("Crucifix On Anything (Inf Range)", "By PenguinManiack", function ()
@@ -128,6 +238,7 @@ Section:NewButton("Devil Crucifix (Inf Range)", "By PenguinManiack", function ()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
 end)
 
+local Section = Tab:NewSection("Inf Uses")
 --3
 
 Section:NewButton("Crucifix On Anything (Inf Uses)", "By PenguinManiack", function ()
@@ -162,6 +273,7 @@ Section:NewButton("Devil Crucifix (Inf Uses)", "By PenguinManiack", function ()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
 end)
 
+local Section = Tab:NewSection("Inf Range,Uses")
 --4
 
 Section:NewButton("Crucifix On Anything (Inf Range,Uses)", "By PenguinManiack", function ()
@@ -196,6 +308,39 @@ Section:NewButton("Devil Crucifix (Inf Range,Uses)", "By PenguinManiack", functi
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
 end)
 
+local Section = Tab:NewSection("Good Range")
+--5
+
+Section:NewButton("Crucifix On Anything (Good Range)", "By PenguinManiack", function ()
+	_G.Range = 100			-- or 50
+	_G.OnAnything = true
+	_G.Fail = false
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Crucifix On Anything (Good Range,Fail)", "By PenguinManiack", function ()
+	_G.Range = 100			-- or 50
+	_G.OnAnything = true
+	_G.Fail = true
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Eletric Crucifix (Good Range)", "By PenguinManiack", function ()
+	_G.Uses = 1
+	_G.Range = 100			-- or 50
+	_G.OnClick = true
+	_G.Variant = "Eletric"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
+Section:NewButton("Devil Crucifix (Good Range)", "By PenguinManiack", function ()
+	_G.Uses = 1
+	_G.Range = 100			-- or 50
+	_G.OnClick = true
+	_G.Variant = "Devil"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua"))()
+end)
+
 local Tab = Window:NewTab("Modes")
 local Section = Tab:NewSection("Modes i found on yt and github")
 
@@ -225,8 +370,16 @@ Section:NewButton("Doors Mayhem Mode", "Mayhem mode by HollowedOutMods", functio
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/HollowedOutMods/MayhemMode/main/loader.lua'))()
 end)
 
-Section:NewButton("Birthday Mode", "Happy Birthday Plamen6789", function ()
-	loadstring(gme:HttpGet("https://raw.githubusercontent.com/plamen6789/BirthdayModeDOORS/main/BirthdayModeScript"))()
+Section:NewButton("Doors Fear Mode", "You are fearing , by Ukazix", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Ukazix/fear/main/fearmode_3.txt"))()
+end)
+
+Section:NewButton("Doors Birthday Mode", "Happy Birthday Plamen6789", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/plamen6789/BirthdayModeDOORS/main/BirthdayModeScript"))()
+end)
+
+Section:NewButton("Doors Ice Mode", "script made by me , you will like a ice", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Size = Udim.new(0.5, 0.5, 0.5)
 end)
 
 Section:NewButton("Endless Doors", "Wow endless doors in doors by check78", function ()
@@ -242,6 +395,10 @@ Section:NewButton("Endless Doors", "Wow endless doors in doors by check78", func
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/worldcuuuup/main/VictrolaRecreation.txt"))()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/worldcuuuup/main/MusicReplace.txt"))()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Entities/main/DeathSound.txt"))()
+end)
+
+Section:NewButton("HollowedOutMods Hardcore", "Others hardcore", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/HollowedOutMods/Doors/main/hardmode.lua"))()
 end)
 
 local Tab = Window:NewTab("Gui")
@@ -275,12 +432,32 @@ Section:NewButton("Plamen Utilities Gui", "by Plamen6789", function ()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/plamen6789/UtilitiesHub/main/UtilitiesGUI"))()
 end)
 
+Section:NewButton("The Nerd V3.5", "A nerd script april fool update", function ()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/NeRDV3.5_New.lua'))()
+end)
+
 Section:NewButton("Plamen Old Entity Gui", "Yes", function ()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/plamen6789/OldEntityGUI/main/OldEntityGUI"))()
 end)
 
-Section:NewButton("FE Trolling Gui (Lag)", "FE trolling gui it may crash you , by Chrono", function ()
-	loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/poopdoors_edited/main/poopdoors_edited.lua"),true))()
+Section:NewButton("Crows script hub", "by PenguinManiack", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/my-script/main/Crows%20script%20hub"))()
+end)
+
+Section:NewButton("The Script", "by PenguinManiack", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PenguinManiack/my-script/main/the%20script"))()
+end)
+
+Section:NewButton("Items + Morph gui", "made by K0t1n i guess...", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Item%20%2B%20Entities%20Morph%20GUI"))()
+end)
+
+Section:NewButton("MsDoors", "Yes by mstudio45", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/mstudio45/poopdoors_edited/main/poopdoors_edited.lua"))()
+end)
+
+Section:NewButton("FE Trolling Gui", "this may crash you , by Chrono", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAccelerator/Paid-Scripts/main/FE/TrollingGUI.lua"))()
 end)
 
 Section:NewButton("DeividHub", "Doors hub by DeividComsono", function ()
@@ -593,12 +770,98 @@ Section:NewButton("Anti-Lag", "Best anti lag (NO REMOVE DECAL)", function ()
 	end
 end)
 
-Section:NewButton("Noclip Bypass (no entity)", "Bypass anti-cheat", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/tfLb1EUs"))()  
+Section:NewButton("Noclip Bypass (R and no entity)", "R to Bypass anti-cheat", function()
+    -- Made by Deivid#5444
+
+    _G.Keybind = "R"
+    _G.ClipGui = true
+    _G.IncludeNoclip = true
+
+    local isEnabled = false
+
+    local UIS = game:GetService("UserInputService")
+
+    local Plr = game.Players.LocalPlayer
+    local Char = Plr.Character or Plr.CharacterAdded:Wait()
+
+    local ScreenGui = Instance.new("ScreenGui")
+    ScreenGui.Parent = game.CoreGui
+    ScreenGui.Enabled = _G.ClipGui or false
+
+    local TextLabel = Instance.new("TextLabel")
+    TextLabel.Parent = ScreenGui
+
+    TextLabel.AnchorPoint = Vector2.new(1, 0)
+    TextLabel.Position = UDim2.new(1, -5, 0, 0)
+    TextLabel.Text = "Noclip + Bypasser: Off"
+    TextLabel.Size = UDim2.new(0,200,0,75)
+    TextLabel.TextScaled = true
+    TextLabel.TextStrokeColor3 = Color3.new(1,1,1)
+    TextLabel.TextStrokeTransparency = 0
+    TextLabel.BackgroundTransparency = 1
+
+    function getValue()
+        local value
+        if isEnabled then
+            value = "On"
+        else
+            value = "Off"
+        end
+        return value
+    end
+
+    UIS.InputBegan:Connect(function(input, gp)
+        if gp then return end
+
+        if input.KeyCode == Enum.KeyCode[_G.Keybind] then
+            isEnabled = not isEnabled
+            task.wait()
+            TextLabel.Text = "Noclip + Bypasser: " .. getValue()
+        end
+    end)
+
+    game:GetService("RunService").RenderStepped:Connect(function()
+        if not Char:FindFirstChild("HumanoidRootPart") then return end
+        if _G.IncludeNoclip then
+            Char.HumanoidRootPart.CanCollide = not isEnabled
+            Char.Collision.CanCollide = not isEnabled
+        end
+
+        local HrpCFrame = Char.HumanoidRootPart.CFrame
+
+        local ray = Ray.new(HrpCFrame.Position, HrpCFrame.LookVector * 0.5)
+        local part = workspace:FindPartOnRay(ray)
+        if part and part.CanCollide == true and isEnabled then
+            Char.HumanoidRootPart.Anchored = true
+            Char:PivotTo(Char.HumanoidRootPart.CFrame * CFrame.new(0, 1000, 0))
+            task.wait()
+            Char:PivotTo(Char.HumanoidRootPart.CFrame * CFrame.new(0, 0, -4))
+            task.wait()
+            Char:PivotTo(Char.HumanoidRootPart.CFrame * CFrame.new(0, -1000, 0))
+            task.wait(0.1)
+            Char.HumanoidRootPart.Anchored = false
+        end
+    end)  
+end)
+
+Section:NewButton("Rooms Auto Walk", "made by Geoduude", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/DaRealGeo/roblox/master/rooms-autowalk"))()
+end)
+
+Section:NewButton("Rooms Auto Walk Minimized", "Minimized ver , made by Geoduude", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/DaRealGeo/roblox/master/rooms-autowalk"))()
+end)
+
+Section:NewButton("God Mode", "Im god (It means nothing can kill you)", function ()
+	Workspace[""..game.Players.LocalPlayer.Name].KillScript:Destroy()
 end)
 
 Section:NewButton("Chrono Bypass Anti-Cheat", "Doors have anti-cheat update , now this script will help you noclip or fly without anti-cheat", function ()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAccelerator/Public-Scripts/main/DoorsBypasses/DoorsACBypass.lua",true))()
+end)
+
+Section:NewButton("ReTexture", "New Texture", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/HollowedOutMods/Doors/main/retexture.lua"))()
 end)
 
 local Tab = Window:NewTab("Custom entities spawner")
@@ -624,56 +887,23 @@ Section:NewButton("Blink", "Blink fixed by check78 , blonk", function ()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Entities/main/Blink%20Fixed.txt"))()
 end)
 
-local Tab = Window:NewTab("Plushie")
-local Section = Tab:NewSection("Doors Plushie")
-
-Section:NewButton("Screech plushly patched", "Psst", function()
-	local Item = game:GetObjects("rbxassetid://110017631")[1] 
-	Item.Parent = game.Players.LocalPlayer.Backpack 
-end)
-
-Section:NewButton("Screech Figure patched", "screech x figure?", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/aKaxwTKc"))()  
-end)
-
-Section:NewButton("Jack plushy patched", "My heart", function()
-	local Item = game:GetObjects("rbxassetid://11996695916")[1]
-	Item.Parent = game.Players.LocalPlayer.Backpack
-end)
-
-Section:NewButton("Screech plushy", "You hate screech but you didn't hate plushy" function()
-	loadstring(game:HttpGet("https://pastebin.com/raw/yAyZVLAW"))()
-end)
-
-Section:NewButton("Seek plushie", "Seek love his plushie", function()
-	loadstring(game:HttpGet("https://pastefy.ga/cMz6DDWC/raw"))()  
-end)
-
-Section:NewButton("Ambush plushie", "Im rebound", function()
-	loadstring(game:HttpGet("https://pastefy.ga/F05e55h3/raw"))()  
-end)
-
-Section:NewButton("A-60 Plushie", "It look like a imposter", function()
-	loadstring(game:HttpGet("https://pastefy.ga/UhuzwPLZ/raw"))()  
-end)
-
-Section:NewButton("figure plushie", "i can't hear you", function()
-	loadstring(game:HttpGet("https://pastefy.ga/cn87mQiq/raw"))()  
-end)
-
-Section:NewButton("Christmas screech", "Christmas already started", function()
-	loadstring(game:HttpGet("https://pastefy.ga/x1MCsUL1/raw"))()  
-end)
-
-Section:NewButton("Rebound Plushie (patched)", "I waiting for you", function()
-	loadstring(game:HttpGet("https://pastefy.ga/FxeEaLhN/raw"))()  
-end)
-
 local Tab = Window:NewTab("Other")
 local Section = Tab:NewSection("Idk what to say at this")
 
-Section:NewButton("FE Inf Jack", "Need an anti-cheat first then execute", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/aKHfDXT4"))()
+Section:NewButton("FE Inf Jack Edited", "Edited by Steven", function()
+    loadstring(game:HttpGet("raw.githubusercontent.com/M4nh23/Rbx-Doors-Scripts/main/By%20Steven"))()       -- Pastebin is broke
+end)
+
+Section:NewButton("Real FE Inf Jack", "This is real one", function ()
+	loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\39\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\77\90\69\69\78\50\52\50\52\47\100\111\111\114\115\47\109\97\105\110\47\73\110\102\74\97\99\107\86\50\46\116\120\116\39\41\41\40\41\10")()
+end)
+
+Section:NewButton("Crucifix on door 0", "made by K0t1n", function ()
+	loadstring("https://raw.githubusercontent.com/K0t1n/Public/main/Crucifix%20On%20Door%200")()
+end)
+
+Section:NewButton("PenguinManiack Plushie", "WoW PenguinManiack but plushie!!!", function ()
+	loadstring("https://raw.githubusercontent.com/K0t1n/Public/main/PenguinManiack%20Plushie")()
 end)
 
 Section:NewButton("Stop Posting About Among SuS", "Credit of STOP POSTING ABOUT BALLER , by PenguinManiack", function ()
@@ -685,4 +915,110 @@ Section:NewButton("Stop Posting About Among SuS", "Credit of STOP POSTING ABOUT 
    	   firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "you have been SUSED by the AMONGUS")
    	   model["STOP POSTING ABOUT AMONG US (FULL, CLEAN)"]:Play()
 	end)
+end)
+
+Section:NewButton("Christmas Replacement 1", "Made by Geoduude", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/geoduude/roblox/master/penguinmaniack/christmasreplacement1"))()
+end)
+
+Section:NewButton("Christmas Replacement 1-A", "Made by Geoduude", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/geoduude/roblox/master/penguinmaniack/christmasreplacement1-A"))()
+end)
+
+Section:NewButton("Christmas Replacement 2", "Made by Geoduude", function ()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/geoduude/roblox/master/penguinmaniack/christmasreplacement2"))()
+end)
+
+Section:NewButton("Bypasser can pickup item", "wow", function ()
+	game:GetService("ReplicatedStorage").ItemShop.Flashlight:SetAttribute('Price',5)
+end)
+
+Section:NewButton("idk", "Figure cam i guess", function ()
+    if game.ReplicatedStorage.GameData.LastestRoom == 49 or 90 then
+        game:GetService("RunService").RenderStepped:Connect(function ()
+            workspace.CurrentCamera.CFrame = workspace.CurrentRooms[50].FigureSetup.FigureRagdoll.Head.CFrame
+        end)
+        local cam = workspace.CurrentCamera
+        local head = game.Players.LocalPlayer.Character.Head
+
+        game:GetService("RunService").RenderStepped:Connect(function ()
+            cam.CFrame = head.CFrame
+        end)
+    else
+        firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Door 49/50 not found.")
+    end
+end)
+
+Section:NewToggle("Freeze yourself", "script made by me (no one asked)", function(state)
+    if state then
+        local char = game.Players.LocalPlayer.Character
+        local head = char.Head
+        local hrp = char.HumanoidRootPart
+
+        head.Anchored = true
+        hrp.Anchored = true		    -- false
+    else
+        local char = game.Players.LocalPlayer.Character
+        local head = char.Head
+        local hrp = char.HumanoidRootPart
+
+        head.Anchored = false
+        hrp.Anchored = false		-- false
+    end
+end)
+
+Section:NewToggle("Freeze head", "script made by me (no one asked)", function(state)
+    if state then
+        local char = game.Players.LocalPlayer.Character
+        local head = char.Head
+        local hrp = char.HumanoidRootPart
+
+        head.Anchored = true
+    else
+        local char = game.Players.LocalPlayer.Character
+        local head = char.Head
+        local hrp = char.HumanoidRootPart
+
+        head.Anchored = false
+    end
+end)
+
+Section:NewButton("Kick", "AAAAAAAAAAAAA", function ()
+	local plr = game.Players.LocalPlayer
+	plr:Kick("Why are you kick yourslef")
+end)
+
+Section:NewButton("Sound", "Sick!", function ()
+    local sound = Instance.new("Sound")
+    sound.Name = "1jfso2or22cl2c,"
+    sound.Parent = Workspace
+    sound.SoundId = "rbxassetid://  IDNAME"
+end)
+
+Section:NewButton("Be everything", "what am i", function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/BeEverything.lua"))()
+end)
+
+Section:NewButton("Doors Rooms", "Doors but Rooms (Fart)", function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/doorsroomdone.lua"))()
+end)
+
+Section:NewButton("", "", function ()
+    print("This is a test button don't mind")
+end)
+
+Section:NewButton("PASTEBIN IS BROKE", "THIS IS WHY I REUPLOAD", function ()
+    print("ALL PASTEBIN IS BROKE THIS IS WHY I REUPLOAD ALL THE SCRIPT")
+end)
+
+local Tab = Window:NewTab("Setting")
+local Section = Tab:NewSection("Change the gui to smth else")
+
+Section:NewKeybind("Keybind UI", "Toggle the UI", Enum.KeyCode.RightBracket, function ()	-- it mean you need press "]"
+	Library:ToggleUI()
+end)
+
+Section:NewKeybind("Free Mouse", "Free mouse in first person", Enum.KeyCode.L, function ()
+    print("Work in progress")
+    firesignal(game.ReplicatedStorage.EntityInfo.Caption.OnClientEvent, "Work in progress , please wait to the next update of this script.")
 end)
